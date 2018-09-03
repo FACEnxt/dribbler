@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerClass } from '../player';
 
 @Component({
   selector: 'app-players',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
-  private player : string = 'Kobe Bryant';
+  private player: PlayerClass = {
+  keyCode : 'D',
+  name : 'Kobe Bryant',
+  color : '#BD10E0'
+ };
   constructor() { }
 
   ngOnInit() {
