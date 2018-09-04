@@ -7,7 +7,13 @@ export class PlayerService {
 
   constructor() { }
 
+  private players : PlayerClass[] = PLAYERS;
   getPlayers() : PlayerClass[] {
-    return PLAYERS ;
+    return this.players ;
   }
+  addPlayer(name: string): void{
+   var newPlayer = {name:name,keyCode:'A',color:'#341122'};
+   this.players.push(newPlayer);
+ }
+
 }

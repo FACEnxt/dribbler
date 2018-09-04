@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerClass } from '../player';
-import { PLAYERS } from '../player-stock';
+import {PlayerService} from '../player.service';
 
 @Component({
   selector: 'app-players',
@@ -8,8 +8,7 @@ import { PLAYERS } from '../player-stock';
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
-  private players : PlayerClass[] = PLAYERS;
-  constructor() { }
+  constructor(private playerservice : PlayerService) { }
 
   ngOnInit() {
   }
