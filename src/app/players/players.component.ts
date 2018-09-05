@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PlayerClass } from '../player';
 import {PlayerService} from '../player.service';
 
@@ -7,7 +7,9 @@ import {PlayerService} from '../player.service';
   templateUrl: './players.component.html',
   styleUrls: ['./players.component.css']
 })
+
 export class PlayersComponent implements OnInit {
+  @Input('firstScreen') firstScreen : any = true;
   constructor(private playerservice : PlayerService) { }
 
   ngOnInit() {
