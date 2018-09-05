@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit,HostListener } from '@angular/core';
+import { PlayerService } from '../player.service';
 @Component({
   selector: 'app-playground',
   templateUrl: './playground.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaygroundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playerservice : PlayerService) { }
 
   ngOnInit() {
   }
-
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+   this.playerservice.scorePlayers(event);
+  }
 }
