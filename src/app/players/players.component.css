@@ -65,3 +65,14 @@ background: #F2F2F2;
  50% { transform: translate3d(0, 60vh, 0);   }
  100% { transform: translate3d(0, 0, 0);   }
 }
+/** Start the game **/
+.start_game
+{
+ background: #0BB76C;
+ display: block;
+ font-size: 1.5em;
+ padding: 1em;
+ text-align: center;
+ text-decoration: none;
+ color:#fff;
+}
