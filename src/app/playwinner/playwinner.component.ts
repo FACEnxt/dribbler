@@ -15,6 +15,8 @@ export class PlaywinnerComponent implements OnInit {
  ngOnInit(){
 ﻿
 this.winner = JSON.parse(this.route.snapshot.paramMap.get('player'));
+// Remove Local storage
+    localStorage.removeItem('players');
 }
 
 }
