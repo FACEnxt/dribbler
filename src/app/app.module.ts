@@ -6,7 +6,7 @@ import { PlayersComponent } from './players/players.component';
 
 import {PlayerService} from './player.service';
 import { PlaygroundComponent } from './playground/playground.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { PlaywinnerComponent } from './playwinner/playwinner.component';
 
 @NgModule({
